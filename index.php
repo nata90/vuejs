@@ -6,13 +6,14 @@
 </head>
 <body>
 	<div id="app">
-		<h1>{{message}}</h1>
+		<h1 v-once v-html="message" v-bind:class="class_h1">{{message}}</h1>
 	</div>
 	<script type="text/javascript">
 		var vm = new Vue({
 			el:'#app',
 			data:{
-				message:'Hello World'
+				message:"<span style='color:red'>Hello World!</a>",
+				class_h1: "title",
 			},
 			beforeCreate(){
 				console.log('before create: '+'message = '+this.message)
