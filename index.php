@@ -7,6 +7,9 @@
 <body>
 	<div id="app">
 		<h1 v-once v-html="message" v-bind:class="class_h1">{{message}}</h1>
+		<h2>{{ counter }}</h2>
+		<button onclick="vm.increment()"> + </button>
+		<button onclick="vm.decrement()"> - </button>
 	</div>
 	<script type="text/javascript">
 		var vm = new Vue({
@@ -14,6 +17,15 @@
 			data:{
 				message:"<span style='color:red'>Hello World!</a>",
 				class_h1: "title",
+				counter:0,
+			},
+			methods:{
+				increment(){
+					this.counter++
+				},
+				decrement(){
+					this.counter--
+				}
 			},
 			beforeCreate(){
 				console.log('before create: '+'message = '+this.message)
