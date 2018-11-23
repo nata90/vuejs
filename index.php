@@ -7,12 +7,16 @@
 <body>
 	<div id="app">
 		<h1>{{message}}</h1>
+		<h2 v-once>{{datatetap}}</h2>
+		<h2 v-html="html"></h2>
 	</div>
 	<script type="text/javascript">
 		var vm = new Vue({
 			el:'#app',
 			data:{
-				message:'Hello World'
+				message : 'Hello World',
+				datatetap : 'Tidak bisa diubah',
+				html : "<span style='color:red'>Data Html</a>"
 			},
 			beforeCreate(){
 				console.log('before create: '+'message = '+this.message)
