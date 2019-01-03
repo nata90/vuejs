@@ -10,7 +10,8 @@
 		<h2 v-once>{{datatetap}}</h2>
 		<h2 v-html="html"></h2>
 		<h1 v-once v-html="message" v-bind:class="class_h1">{{message}}</h1>
-		<h2>{{ counter }}</h2>
+		<?php //<h2>{{ counter }}</h2> ?>
+		<input type="text" name="value" v-bind:value="counter">
 		<button onclick="vm.increment()"> + </button>
 		<button onclick="vm.decrement()"> - </button>
 	</div>
