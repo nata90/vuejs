@@ -9,7 +9,7 @@
 		<h1>{{message}}</h1>
 		<h2 v-once>{{datatetap}}</h2>
 		<h2 v-html="html"></h2>
-		<h1 v-once v-html="message" v-bind:class="class_h1">{{message}}</h1>
+		<h1 v-html="message" v-bind:class="class_h1">{{message}}</h1>
 		<?php //<h2>{{ counter }}</h2> ?>
 		<input type="text" name="value" v-bind:value="counter">
 		<button onclick="vm.increment()"> + </button>
@@ -19,7 +19,6 @@
 		var vm = new Vue({
 			el:'#app',
 			data:{
-				message : 'Hello World',
 				datatetap : 'Tidak bisa diubah',
 				html : "<span style='color:red'>Data Html</a>",
 				message:"<span style='color:red'>Hello World!</a>",
